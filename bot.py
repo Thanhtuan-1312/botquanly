@@ -10,8 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/drive']
 import json, os
 creds = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(os.environ['GOOGLE_CREDENTIALS']), scope)
-    r"C:\Users\iGaming Long Xuyen\Downloads\donhangtelegram\credentials.json", scope
-)
+    
 client = gspread.authorize(creds)
 sheet = client.open("Bảng tính không có tiêu đề").sheet1
 
